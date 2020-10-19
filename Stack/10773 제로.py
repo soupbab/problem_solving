@@ -1,3 +1,6 @@
+import sys
+
+
 class Stack:
 
     def __init__(self):
@@ -17,3 +20,18 @@ class Stack:
 
     def top(self):
         return self.data[-1] if self.size() > 0 else -1
+
+
+if __name__ == "__main__":
+    k = int(sys.stdin.readline().rstrip())
+    box = Stack()
+
+    for _ in range(k):
+        number = int(sys.stdin.readline().rstrip())
+
+        if number != 0:
+            box.push(number)
+        else:
+            box.pop()
+
+    print(sum(box.data))
