@@ -1,16 +1,21 @@
-import sys
 from _collections import deque
 
 
-class Queue:
+class Deque:
     def __init__(self):
         self.data = deque([])
 
-    def push(self, data):
+    def push_front(self, data):
+        self.data.appendleft(data)
+
+    def push_back(self, data):
         self.data.append(data)
 
-    def pop(self):
+    def pop_front(self):
         return self.data.popleft() if self.size() > 0 else -1
+
+    def pop_back(self):
+        return self.data.pop() if self.size() > 0 else -1
 
     def size(self):
         return len(self.data)
@@ -23,5 +28,3 @@ class Queue:
 
     def back(self):
         return self.data[-1] if self.size() > 0 else -1
-
-
