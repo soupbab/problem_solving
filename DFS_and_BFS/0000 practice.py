@@ -66,7 +66,7 @@ def find_path(maze):
 if __name__ == "__main__":
     n, m = map(int, input().split())
     maze = [list(map(int, input())) for _ in range(n)]
-    visited = [[False for _ in range(m)] for _ in range(n)]
+    visited = [[False] * m for _ in range(n)]
 
     print(find_path(maze))
 
