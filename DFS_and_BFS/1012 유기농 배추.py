@@ -6,20 +6,21 @@ def dfs(y, x, data):
     neighbors = []
 
     if y > 0:
-        neighbors.append((y - 1, x))
+        neighbors.append((x, y - 1))
     if y < n - 1:
-        neighbors.append((y + 1, x))
+        neighbors.append((x, y + 1))
     if x > 0:
-        neighbors.append((y, x - 1))
+        neighbors.append((x - 1, y))
     if x < m - 1:
-        neighbors.append((y, x + 1))
+        neighbors.append((x + 1, y))
 
     for neighbor in neighbors:
-        if data[neighbor[0]][neighbor[1]] == 1:
-            dfs(neighbor[0], neighbor[1], data)
+        if data[neighbor[1]][neighbor[0]] == 1:
+            dfs(neighbor[1], neighbor[0], data)
 
 
 if __name__ == "__main__":
+    sys.setrecursionlimit(50000)
     t = int(sys.stdin.readline().rstrip())
     answer = []
 
