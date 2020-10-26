@@ -29,7 +29,7 @@ if __name__ == "__main__":
 # p.201 떡볶이 떡 만들기 #################################################################################################
 
 
-def binary_search_2(array, target, start, end):
+def binary_search_2(target, start, end):
     temp = 0
 
     while start <= end:
@@ -53,8 +53,7 @@ if __name__ == "__main__":
     n, m = map(int, input().split())
     rice_cakes = sorted(list(map(int, input().split())))
     height = max(rice_cakes)
-    cutter = list(range(0, height))
 
-    print(binary_search_2(cutter, m, 0, height))
+    print(binary_search_2(m, 0, height))
 
 ########################################################################################################################
