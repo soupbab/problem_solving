@@ -15,3 +15,4 @@ for i in range(1, n):
         dp[i][j] %= 1000000000
 
 print(sum(dp[n - 1]) % 1000000000)
+
