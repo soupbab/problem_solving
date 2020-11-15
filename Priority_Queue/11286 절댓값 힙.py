@@ -3,11 +3,13 @@ import heapq
 
 
 def abs_heap(array, number):
-    if number != 0:
-        heapq.heappush(array, number)
+    if number > 0:
+        heapq.heappush(array, (number + 0.5, number))
+    elif number < 0:
+        heapq.heappush(array, (-number, number))
     else:
         if array:
-            return print(heapq.heappop(array))
+            return print(heapq.heappop(array)[1])
         else:
             return print(0)
 
