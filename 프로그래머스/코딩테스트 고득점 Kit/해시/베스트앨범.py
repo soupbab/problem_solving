@@ -17,4 +17,3 @@ def solution(genres, plays):
             answer.append(item[2])
             genre_count[item[0]] += 1
     return answer
-  
