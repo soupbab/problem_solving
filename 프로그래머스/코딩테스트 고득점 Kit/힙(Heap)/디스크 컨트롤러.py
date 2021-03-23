@@ -26,5 +26,5 @@ def solution(jobs):
         time += task[0]
         answer += time - task[1]
     
-    answer /= length
+    answer //= length
     return answer
