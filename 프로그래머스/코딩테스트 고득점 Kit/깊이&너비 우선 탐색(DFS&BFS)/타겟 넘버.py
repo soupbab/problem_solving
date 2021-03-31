@@ -1,4 +1,4 @@
-from collections import deque, Counter
+from collections import deque
 
 def solution(numbers, target):
     answer = 0
@@ -10,7 +10,6 @@ def solution(numbers, target):
             q.append(temp + number)
             q.append(temp - number)
     
-    counter = Counter(q)
-    answer = counter[target]
+    answer = q.count(target)
             
     return answer
